@@ -1,0 +1,115 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+:root {
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color: #181816;
+    background-color: #FAF8F5;
+  }
+  
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #FAF8F5;
+    color: #181816;
+  }
+
+  h1, h2, h3, .font-display, .font-serif, .font-editorial {
+    font-family: var(--font-display);
+    letter-spacing: -0.015em;
+  }
+}
+
+/* Custom Minimalist Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D8D2C5;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A8A090;
+}
+
+/* Reusable Design System Utilities without @apply */
+.btn-primary {
+  background-color: #2D4436;
+  color: #FAF8F5;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  padding: 0.625rem 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 200ms ease;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background-color: #203227;
+}
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #181816;
+  border: 1px solid #DDD6C8;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  padding: 0.625rem 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 200ms ease;
+  cursor: pointer;
+}
+.btn-secondary:hover {
+  background-color: #F2ECE1;
+}
+
+.input-field {
+  width: 100%;
+  background-color: #FFFFFF;
+  border: 1px solid #DDD6C8;
+  padding: 0.625rem 0.875rem;
+  font-size: 0.875rem;
+  color: #181816;
+  transition: all 150ms ease;
+  outline: none;
+}
+.input-field:focus {
+  border-color: #2D4436;
+}
+
+.editorial-card {
+  background-color: #FFFFFF;
+  border: 1px solid #EAE4D8;
+  transition: all 200ms ease;
+}
+.editorial-card:hover {
+  border-color: #D8D0C0;
+}
