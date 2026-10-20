@@ -8,7 +8,7 @@ import {
   CART_SAVE_PAYMENT_METHOD,
 } from '../constants/cartConstants';
 
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
 
 export const addToCart = (id, qty = 1) => async (dispatch, getState) => {
   const { data } = await axios.get(`${API_BASE_URL}/products/${id}`);
